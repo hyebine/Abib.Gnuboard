@@ -1,0 +1,64 @@
+$activecolor : #999999;
+$basiccolor : #1E1E1E;
+$fontbasic : "Noto Sans KR";
+$enfont: "Roboto";
+$fontsize : 1rem;
+
+$darkcolor : #272B28;
+
+.bg-dark {
+  background-color: $darkcolor !important;
+}
+
+body {
+
+  font-family: $enfont, $fontbasic, sans-serif;
+
+
+
+
+  a {
+    color: $basiccolor;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  #gnb_1dul {
+
+
+
+    a {
+      color: $activecolor;
+      font-weight: 200;
+
+      &:hover {
+        color: $basiccolor !important;
+      }
+
+    }
+  }
+
+
+
+  .fa+.sound_only {
+
+    position: relative !important;
+
+    width: auto;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.8;
+
+
+  }
+
+  .btn_bo_user li {
+    width: auto !important
+  }
+}

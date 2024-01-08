@@ -1,0 +1,32 @@
+.bg-dark {
+  background-color: #272B28 !important;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+body a {
+  color: #1E1E1E;
+}
+body a:hover {
+  text-decoration: none;
+}
+body #gnb_1dul a {
+  color: #999999;
+  font-weight: 200;
+}
+body #gnb_1dul a:hover {
+  color: #1E1E1E !important;
+}
+body .fa + .sound_only {
+  position: relative !important;
+  width: auto;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+body .btn_bo_user li {
+  width: auto !important;
+}
