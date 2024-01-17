@@ -1,10 +1,12 @@
 $activecolor : #999999;
 $basiccolor : #1E1E1E;
+$minicolor : #EDE5D8;
+$basicWcolor : #F8F8F8;
 $fontbasic : "Noto Sans KR";
 $enfont: "Roboto";
 $fontsize : 1rem;
-
 $darkcolor : #272B28;
+
 
 .bg-dark {
   background-color: $darkcolor !important;
@@ -26,14 +28,51 @@ body {
     }
   }
 
+  #hd_wrapper {
+
+
+    .adtop {
+
+      a {
+        font-size: 12px;
+
+        &:hover {
+          color: $minicolor !important;
+        }
+
+      }
+    }
+
+    .container {
+      line-height: 100px;
+    }
+
+    #gnb {
+      background-color: transparent;
+    }
+
+    .hd_login {
+
+      font-weight: 300;
+
+      li {
+        padding-left: 23px;
+
+      }
+    }
+  }
+
 
   #gnb_1dul {
 
+    margin: 0;
+    border: 0 !important;
 
+    .gnb_1da {
+      color: $basicWcolor;
+      font-weight: 300;
+      padding: 0 20px;
 
-    a {
-      color: $activecolor;
-      font-weight: 200;
 
       &:hover {
         color: $basiccolor !important;

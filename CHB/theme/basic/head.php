@@ -18,10 +18,10 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
     }
     ?>
 
-    <div id="hd_wrapper" class="fixed-top">
+    <div id="hd_wrapper" class="fixed-top border-bottom border-white">
     <?php echo latest("ad_basic","adtop", 1, 50); ?>
 
-    <div class="container d-lg-flex align-items-center justify-content-between">
+    <div class="container p-0 d-lg-flex align-items-center justify-content-between">
         <div id="logo">
             <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_URL ?>/bin/img/logo.png" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
@@ -104,18 +104,21 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                 <div id="gnb_all_bg"></div>
             </div>
         </nav>
-        <ul class="hd_login d-flex">        
+        <ul class="hd_login d-flex m-0">        
             <?php if ($is_member) {  ?>
-            <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
+            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
             <?php if ($is_admin) {  ?>
-            <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+            <li class="tnb_admin d-none"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
             <?php }  ?>
             <?php } else {  ?>
             <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
             <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
             <?php }  ?>
-            <li>Search</li>
+            <!-- 만듦 -->
+            <li><a href="">LOGIN</a></li>
+            <li><a href="">JOIN</a></li>
+            <li><a href="">SEARCH</a></li>
         </ul>
 
     </div>

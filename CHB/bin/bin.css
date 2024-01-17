@@ -11,11 +11,34 @@ body a {
 body a:hover {
   text-decoration: none;
 }
-body #gnb_1dul a {
-  color: #999999;
-  font-weight: 200;
+body #hd_wrapper .adtop a {
+  font-size: 12px;
 }
-body #gnb_1dul a:hover {
+body #hd_wrapper .adtop a:hover {
+  color: #EDE5D8 !important;
+}
+body #hd_wrapper .container {
+  line-height: 100px;
+}
+body #hd_wrapper #gnb {
+  background-color: transparent;
+}
+body #hd_wrapper .hd_login {
+  font-weight: 300;
+}
+body #hd_wrapper .hd_login li {
+  padding-left: 23px;
+}
+body #gnb_1dul {
+  margin: 0;
+  border: 0 !important;
+}
+body #gnb_1dul .gnb_1da {
+  color: #F8F8F8;
+  font-weight: 300;
+  padding: 0 20px;
+}
+body #gnb_1dul .gnb_1da:hover {
   color: #1E1E1E !important;
 }
 body .fa + .sound_only {
