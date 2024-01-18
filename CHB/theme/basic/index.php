@@ -9,7 +9,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <?php 
 
-	echo latest('mainswiper','adm_mainbanner',1, 100); 
+	echo latest('mainswiper','adm_mainbanner',4, 100); 
 	?>
 
 

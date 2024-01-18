@@ -87,22 +87,27 @@ var g5_shop_url = "<?php echo G5_SHOP_URL; ?>";
 <?php if(defined('G5_IS_ADMIN')) { ?>
 var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
 <?php } ?>
+
+
 </script>
+
+<script src="<?php echo G5_JS_URL; ?>/swiper/swiper.min.js"></script>
+<script src="<?php echo G5_JS_URL; ?>/aos/aos.js"></script>
+
+<script src="<?php echo G5_JS_URL; ?>/jquery2.js"></script>
+<script src="<?php echo G5_JS_URL; ?>/jquery-migrate-1.4.1.min.js"></script>
+<script src="<?php echo G5_JS_URL; ?>/jquery.menu.js?ver='.G5_JS_VER.'"></script>
+
+<script src="<?php echo G5_JS_URL; ?>/common.js?ver='.G5_JS_VER.'"></script>
+<script src="<?php echo G5_JS_URL; ?>/wrest.js?ver='.G5_JS_VER.'"></script>
+
+<script src="<?php echo G5_JS_URL; ?>/placeholders.min.js"></script>
+<script src="<?php echo G5_JS_URL; ?>/modernizr.custom.70111.js"></script>
+
+<script src="<?php echo G5_URL; ?>/bin/bin.js"></script>
+
 <?php
-add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/aos/aos.js"></script>', 0);
 
-add_javascript('<script src="'.G5_JS_URL.'/jquery2.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/jquery.menu.js?ver='.G5_JS_VER.'"></script>', 0);
-
-add_javascript('<script src="'.G5_JS_URL.'/common.js?ver='.G5_JS_VER.'"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/wrest.js?ver='.G5_JS_VER.'"></script>', 0);
-
-add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/modernizr.custom.70111.js"></script>', 1); // overflow scroll 감지
-
-add_javascript('<script src="'.G5_URL.'/bin/bin.js"></script>', 1);
 
 
 if(!defined('G5_IS_ADMIN'))

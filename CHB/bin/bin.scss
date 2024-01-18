@@ -29,7 +29,17 @@ body {
   }
 
   #hd_wrapper {
+    border-bottom: 1px solid $basicWcolor;
 
+
+    &:hover {
+      background-color: rgba($basicWcolor, $alpha: 0.5);
+      border-bottom: 1px solid $basiccolor;
+
+      .gnb_1da {
+        color: $activecolor;
+      }
+    }
 
     .adtop {
 
@@ -99,5 +109,20 @@ body {
 
   .btn_bo_user li {
     width: auto !important
+  }
+}
+
+
+// 슬라이드
+
+#wrapper {
+
+  .swiper-slide {
+
+    img {
+      width: 100vw;
+      height: auto;
+    }
+
   }
 }

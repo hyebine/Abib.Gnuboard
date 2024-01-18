@@ -14,11 +14,11 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 
     <?php
     if(defined('_INDEX_')) { // index에서만 실행
-        include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
+       include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
     }
     ?>
 
-    <div id="hd_wrapper" class="fixed-top border-bottom border-white">
+    <div id="hd_wrapper" class="fixed-top">
     <?php echo latest("ad_basic","adtop", 1, 50); ?>
 
     <div class="container p-0 d-lg-flex align-items-center justify-content-between">

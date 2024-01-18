@@ -11,6 +11,16 @@ body a {
 body a:hover {
   text-decoration: none;
 }
+body #hd_wrapper {
+  border-bottom: 1px solid #F8F8F8;
+}
+body #hd_wrapper:hover {
+  background-color: rgba(248, 248, 248, 0.5);
+  border-bottom: 1px solid #1E1E1E;
+}
+body #hd_wrapper:hover .gnb_1da {
+  color: #999999;
+}
 body #hd_wrapper .adtop a {
   font-size: 12px;
 }
@@ -52,4 +62,9 @@ body .fa + .sound_only {
 }
 body .btn_bo_user li {
   width: auto !important;
+}
+
+#wrapper .swiper-slide img {
+  width: 100vw;
+  height: auto;
 }
