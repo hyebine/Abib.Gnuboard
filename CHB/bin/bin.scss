@@ -12,12 +12,28 @@ $darkcolor : #272B28;
   background-color: $darkcolor !important;
 }
 
+
+.scroll {
+  #hd_wrapper {
+    background-color: rgba($basicWcolor, $alpha: 0.5);
+    border-bottom: 1px solid $basiccolor;
+
+    .adtop {
+      margin-top: -32px;
+    }
+
+
+
+    .gnb_1da {
+      color: $activecolor;
+      line-height: 70px;
+
+    }
+  }
+}
+
 body {
-
   font-family: $enfont, $fontbasic, sans-serif;
-
-
-
 
   a {
     color: $basiccolor;
@@ -28,7 +44,9 @@ body {
     }
   }
 
+
   #hd_wrapper {
+    transition: 0.5s;
     border-bottom: 1px solid $basicWcolor;
 
 
@@ -38,10 +56,12 @@ body {
 
       .gnb_1da {
         color: $activecolor;
+        transition: 0.5s;
       }
     }
 
     .adtop {
+      transition: 0.5s;
 
       a {
         font-size: 12px;
@@ -53,9 +73,6 @@ body {
       }
     }
 
-    .container {
-      line-height: 100px;
-    }
 
     #gnb {
       background-color: transparent;
@@ -68,6 +85,10 @@ body {
       li {
         padding-left: 23px;
 
+        a:hover {
+          color: $activecolor ;
+        }
+
       }
     }
   }
@@ -78,16 +99,41 @@ body {
     margin: 0;
     border: 0 !important;
 
+    .gnb_1dli {
+
+      .bg {
+        display: none;
+      }
+    }
+
     .gnb_1da {
       color: $basicWcolor;
       font-weight: 300;
-      padding: 0 20px;
+      line-height: 100px;
+      transition: 0.5s;
+
 
 
       &:hover {
         color: $basiccolor !important;
       }
+    }
 
+    .gnb_2dul {
+      top: 100%;
+      padding-top: 0;
+
+
+      .gnb_2dli {
+
+
+        .gnb_2da {
+          color: $activecolor;
+          font-weight: 300;
+          font-size: 13px;
+
+        }
+      }
     }
   }
 
@@ -115,14 +161,79 @@ body {
 
 // 슬라이드
 
+
+
 #wrapper {
 
   .swiper-slide {
+    height: 90vw;
+    max-height: 800px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    img {
-      width: 100vw;
-      height: auto;
+    @media (min-width:1024px) {
+      height: 800px;
+
     }
 
+    a {
+      color: $basicWcolor ;
+    }
+
+
+  }
+}
+
+.swiper {
+  position: relative;
+
+
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: auto;
+    left: unset;
+    align-items: center;
+
+    .swiper-pagination-bullet {
+      background-color: $basicWcolor;
+
+      margin: 9px 0;
+      width: 4px;
+      height: 4px;
+      opacity: .7;
+
+      &.swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+// 카테고리
+
+.cotegory {
+  padding-top: 170px;
+
+  .title {
+    padding-bottom: 100px;
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .cotegory_li {
+    padding-right: 5px;
+
+    &:last-of-type {
+      padding: 0;
+    }
   }
 }

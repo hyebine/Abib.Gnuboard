@@ -8,11 +8,14 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <?php 
-
+//슬라이드
 	echo latest('mainswiper','adm_mainbanner',4, 100); 
+	//카테고리
+	echo latest('category','category',5, 10);
+
 	?>
 
 
 <?php
 
-    // include_once(G5_THEME_PATH.'/tail.php');
+include_once(G5_THEME_PATH.'/tail.php');

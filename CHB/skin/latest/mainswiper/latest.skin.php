@@ -27,14 +27,17 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
 
-        <div class="swiper-slide">
-
+        <div class="swiper-slide" style="background-image:url(<?php echo $img; ?>)">
+<div class="container d-flex align-items-center h-100 ">
         <?php
-            echo "<a href='".$wr_href."'>";
-            echo $img_content; 
+            echo "<a href='".$wr_href."' class=''>";
+                   echo $list[$i]['wr_subject'];
+                   echo $list[$i]['wr_content'];
+                   
+
             echo "</a>";
            ?>
-
+</div>
         </div>
 
     <?php }  ?>
@@ -42,27 +45,22 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
     <?php }  ?>
     </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+ 
   <div class="swiper-pagination"></div>
-
 
 </div>
 <script>
 const swiper<?php echo $bo_table; ?> = new Swiper('.swiper.<?php echo $bo_table; ?>', {
   loop: true, 
   effect: "fade",
-  autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-      },
+  // autoplay: {
+  //       delay: 4000,
+  //       disableOnInteraction: false
+  //     },
   pagination: {
     el: '.swiper.<?php echo $bo_table; ?> .swiper-pagination',
     clickable: true,
-  }, 
-  navigation: {
-    nextEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-next',
-    prevEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-prev',
   }
+
 });
 </script>

@@ -28,7 +28,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
         <nav id="gnb">
             <h2>메인메뉴</h2>
             <div class="gnb_wrap">
-                <ul id="gnb_1dul">
+                <ul id="gnb_1dul" class="d-none d-lg-block">
                     <li class="gnb_1dli gnb_mnal d-none"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
                     <?php
                     $menu_datas = get_menu_db(0, true);
@@ -183,7 +183,17 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
         $(".gnb_close_btn, #gnb_all_bg").click(function(){
             $("#gnb_all, #gnb_all_bg").hide();
         });
+
+        $(window).scroll(function(){
+            if( $(window).scrollTop() > 80 ){
+                 $("body").addClass("scroll");
+            }else{
+                $("body").removeClass("scroll");
+            }
+        })
     });
+
+    
 
     </script>
 </div>
