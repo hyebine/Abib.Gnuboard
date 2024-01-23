@@ -27,18 +27,19 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
 
-        <div class="swiper-slide" style="background-image:url(<?php echo $img; ?>)">
-<div class="container d-flex align-items-center h-100 ">
+    <div class="swiper-slide" style="background-image:url(<?php echo $img; ?>)">
+      <div class="container d-flex align-items-center h-100 ">
+        <div class="content">
         <?php
-            echo "<a href='".$wr_href."' class=''>";
-                   echo $list[$i]['wr_subject'];
-                   echo $list[$i]['wr_content'];
-                   
+         echo $list[$i]['wr_subject'];
+         echo $list[$i]['wr_content'];
+         ?>
 
-            echo "</a>";
-           ?>
-</div>
-        </div>
+         <a href="<?php echo $list[$i]['wr_link1']; ?>">READ MORE</a>
+
+         </div>
+      </div>
+    </div>
 
     <?php }  ?>
     <?php if ($list_count == 0) { //게시물이 없을 때  ?>
@@ -53,10 +54,10 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 const swiper<?php echo $bo_table; ?> = new Swiper('.swiper.<?php echo $bo_table; ?>', {
   loop: true, 
   effect: "fade",
-  // autoplay: {
-  //       delay: 4000,
-  //       disableOnInteraction: false
-  //     },
+  autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
   pagination: {
     el: '.swiper.<?php echo $bo_table; ?> .swiper-pagination',
     clickable: true,
