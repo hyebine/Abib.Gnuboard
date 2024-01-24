@@ -8,7 +8,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-<div id="hd">
+<div id="hd" class="fixed-top">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
@@ -18,7 +18,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
     }
     ?>
 
-    <div id="hd_wrapper" class="fixed-top">
+    <div id="hd_wrapper" >
     <?php echo latest("ad_basic","adtop", 1, 50); ?>
 
     <div class="container p-0 d-lg-flex align-items-center justify-content-between">
@@ -28,8 +28,9 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
         <nav id="gnb">
             <h2>메인메뉴</h2>
             <div class="gnb_wrap">
+            <button type="button" class="gnb_menu_btn d-lg-none" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button>
                 <ul id="gnb_1dul" class="d-none d-lg-block">
-                    <li class="gnb_1dli gnb_mnal d-none"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                   
                     <?php
                     $menu_datas = get_menu_db(0, true);
                     $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -47,7 +48,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                             if( empty($row2) ) continue; 
 
                             if($k == 0)
-                                echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
+                                echo '<span class="bg">하위분류</span><div class="gnb_2dul bg-transparent"><ul class="gnb_2dul_box bg-transparent">'.PHP_EOL;
                         ?>
                             <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
                         <?php
@@ -183,6 +184,12 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
         $(".gnb_close_btn, #gnb_all_bg").click(function(){
             $("#gnb_all, #gnb_all_bg").hide();
         });
+
+        $(".gnb_al_li_plus").hover(function(){
+            $("#hd").addClass("hover"+$(this).index());
+        }, function(){
+            $("#hd").removeClass("hover"+$(this).index());
+        })
 
         $(window).scroll(function(){
             if( $(window).scrollTop() > 80 ){

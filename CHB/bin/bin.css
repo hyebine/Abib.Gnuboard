@@ -28,6 +28,22 @@ body a {
 body a:hover {
   text-decoration: none;
 }
+body #hd:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: rgba(248, 248, 248, 0.5);
+  height: 0;
+}
+body #hd.hover1:before {
+  height: 450px;
+}
+body #hd.hover0:before {
+  height: 250px;
+}
 body #hd_wrapper {
   transition: 0.5s;
   border-bottom: 1px solid #F8F8F8;
@@ -99,6 +115,14 @@ body .btn_bo_user li {
   width: auto !important;
 }
 
+#wrapper .swiper-slide.swiper-slide-active .content h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+#wrapper .swiper-slide.swiper-slide-active .content a {
+  transform: translateY(0);
+  opacity: 1;
+}
 #wrapper .swiper-slide {
   height: 90vw;
   max-height: 800px;
@@ -111,10 +135,18 @@ body .btn_bo_user li {
     height: 800px;
   }
 }
+#wrapper .swiper-slide.adm_mainbanner0 .content {
+  color: red !important;
+}
 #wrapper .swiper-slide .content {
   color: #F8F8F8;
+}
+#wrapper .swiper-slide .content h3 {
   font-size: 50px;
   font-weight: 500;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s;
 }
 #wrapper .swiper-slide .content p {
   margin: 0;
@@ -133,6 +165,9 @@ body .btn_bo_user li {
   color: #F8F8F8;
   padding: 0.5rem 3rem;
   border: 1.2px solid #F8F8F8;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s;
 }
 #wrapper .swiper-slide .content a:hover {
   background-color: rgba(248, 248, 248, 0.2);
@@ -282,6 +317,11 @@ body .btn_bo_user li {
 .instagram .content {
   font-size: 35px;
   font-weight: 500;
+}
+@media (max-width: 990px) {
+  .instagram .content {
+    text-align: center;
+  }
 }
 .instagram .content p {
   font-size: 15px;

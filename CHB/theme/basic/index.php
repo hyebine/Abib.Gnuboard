@@ -23,7 +23,9 @@ include_once(G5_THEME_PATH.'/head.php');
 <!-- 폼태그 -->
 
 	<div class="">
+	<form action="">
 
+</form>
 	</div>
 
 

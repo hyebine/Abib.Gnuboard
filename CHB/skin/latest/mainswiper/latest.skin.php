@@ -27,11 +27,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
 
-    <div class="swiper-slide" style="background-image:url(<?php echo $img; ?>)">
-      <div class="container d-flex align-items-center h-100 ">
-        <div class="content">
+    <div class="swiper-slide <?php echo $bo_table.$i; ?>" style="background-image:url(<?php echo $img; ?>)">
+      <div class="container d-flex justify-content-center justify-content-lg-start align-items-center h-100 ">
+        <div class="content text-center text-lg-left">
         <?php
-         echo $list[$i]['wr_subject'];
+         echo "<h3>".$list[$i]['wr_subject']."</h3>";
          echo $list[$i]['wr_content'];
          ?>
 
