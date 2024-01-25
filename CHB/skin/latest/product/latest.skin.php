@@ -33,7 +33,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
 
-        <li class="product_li align-items-center justify-content-between text-center mr-4">
+        <li class="product_li align-items-center justify-content-lg-between justify-content-center text-center mr-lg-4">
   
         <?php
            echo "<a href=\"".$wr_href."\" class='h-100 d-block' style='background-image:url(".$img.")'> ";     

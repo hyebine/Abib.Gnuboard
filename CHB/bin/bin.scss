@@ -44,6 +44,17 @@ $darkcolor : #272B28;
 body {
   font-family: $enfont, $fontbasic, sans-serif;
 
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+
+
   a {
     color: $basiccolor;
 
@@ -52,6 +63,16 @@ body {
       text-decoration: none;
     }
   }
+
+  &.viewmenu {
+
+
+    #hd_wrapper {
+      background-color: $basicWcolor !important;
+    }
+  }
+
+
 
   #hd {
 
@@ -76,9 +97,12 @@ body {
   }
 
   #hd_wrapper {
-    transition: 0.5s;
+    transition: all 0.5s ease 0s;
     border-bottom: 1px solid $basicWcolor;
 
+    &.on {
+      background-color: $basicWcolor;
+    }
 
     &:hover {
       background-color: rgba($basicWcolor, $alpha: 0.5);
@@ -117,10 +141,76 @@ body {
 
         a:hover {
           color: $activecolor ;
+
         }
 
       }
     }
+
+    .gnb_menu_btn {
+      background-color: transparent;
+      color: $basiccolor;
+      font-size: 40px;
+
+    }
+
+    #gnb_all {
+      width: 100vw;
+      left: 0;
+      top: 100%;
+      background-color: $basicWcolor;
+      padding: 2rem;
+
+      .gnb_close_btn {
+        background-color: transparent;
+        color: $basiccolor;
+        font-size: 40px;
+      }
+
+      .gnb_al_li {
+
+
+
+
+        .ul2ul {
+          display: none;
+
+          &.act {
+            display: block;
+          }
+
+          a {
+            color: $activecolor;
+            font-weight: 300;
+
+
+            &:hover {
+              color: $basiccolor;
+              font-weight: 400;
+            }
+          }
+        }
+
+
+
+        .a {
+          color: $activecolor;
+        }
+
+
+        .gnb_al_a {
+          color: $basiccolor;
+          font-weight: 400;
+
+          display: inline-block;
+          margin-bottom: 0;
+          padding: 1rem 0;
+        }
+      }
+
+    }
+
+
   }
 
 
@@ -146,6 +236,7 @@ body {
 
       &:hover {
         color: $basiccolor !important;
+
       }
     }
 
@@ -159,9 +250,13 @@ body {
 
         .gnb_2da {
           color: $activecolor;
-          font-weight: 300;
+          font-weight: 400;
           font-size: 13px;
 
+          &:hover {
+            color: $basiccolor;
+            font-weight: 700;
+          }
         }
       }
     }
@@ -201,7 +296,7 @@ body {
         opacity: 1;
       }
 
-      a {
+      p {
         transform: translateY(0);
         opacity: 1;
       }
@@ -223,7 +318,38 @@ body {
 
     &.adm_mainbanner0 {
       .content {
-        color: red !important;
+        color: $basiccolor;
+
+
+
+        a {
+          font-size: 20px;
+          font-weight: 200;
+          color: $basiccolor;
+          padding: 0.5rem 3rem;
+          border: 1.2px solid $basiccolor;
+
+          &:hover {
+            background-color: rgba($basiccolor, $alpha: 0.2);
+            color: $basicWcolor ;
+          }
+        }
+
+        @media (max-width:990px) {
+          color: $basicWcolor;
+
+          a {
+            color: $basicWcolor;
+            border: 1.2px solid $basicWcolor;
+            font-size: 12px;
+            padding: .3rem 2rem;
+
+            &:hover {
+              background-color: rgba($basicWcolor, $alpha: 0.2);
+
+            }
+          }
+        }
       }
 
     }
@@ -232,19 +358,25 @@ body {
 
       color: $basicWcolor;
 
-
+      @media (max-width:990px) {
+        padding-top: 150px;
+      }
 
       h3 {
         font-size: 50px;
         font-weight: 500;
-        transform: translateY(-100%);
+        transform: translateY(-80%);
         opacity: 0;
         transition: 0.5s;
       }
 
       p {
-        margin: 0;
+
         font-weight: 300;
+        transform: translateY(80%);
+        opacity: 0;
+        transition: 0.5s;
+
 
 
         &:first-of-type {
@@ -255,6 +387,7 @@ body {
 
         &:last-of-type {
           font-size: 17px;
+          margin-bottom: 3rem;
         }
       }
 
@@ -265,9 +398,6 @@ body {
         padding: 0.5rem 3rem;
         border: 1.2px solid $basicWcolor;
 
-        transform: translateY(100%);
-        opacity: 0;
-        transition: 0.5s;
 
         &:hover {
           background-color: rgba($basicWcolor, $alpha: 0.2);
@@ -275,6 +405,21 @@ body {
         }
       }
 
+      @media (max-width:990px) {
+        h3 {
+          font-size: 30px;
+
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        a {
+          font-size: 12px;
+          padding: .3rem 2rem;
+        }
+      }
 
 
     }
@@ -477,6 +622,7 @@ body {
   margin-top: 170px;
 
   .pic {
+
     img {
       &:hover {
         filter: brightness(0.5);
@@ -489,8 +635,10 @@ body {
     font-size: 35px;
     font-weight: 500;
 
+
     @media (max-width:990px) {
       text-align: center;
+      padding-top: 70px;
     }
 
     p {
@@ -513,5 +661,3 @@ body {
     }
   }
 }
-
-// 폼 

@@ -21,15 +21,17 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
     <div id="hd_wrapper" >
     <?php echo latest("ad_basic","adtop", 1, 50); ?>
 
-    <div class="container p-0 d-lg-flex align-items-center justify-content-between">
+    <div class="container p-0 d-flex align-items-center justify-content-between">
         <div id="logo">
             <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_URL ?>/bin/img/logo.png" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
         <nav id="gnb">
             <h2>메인메뉴</h2>
             <div class="gnb_wrap">
-            <button type="button" class="gnb_menu_btn d-lg-none" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button>
-                <ul id="gnb_1dul" class="d-none d-lg-block">
+            <button type="button" class="gnb_menu_btn d-lg-none " title="전체메뉴">
+                <i class="bi bi-list" aria-hidden="true"></i>
+                <span class="sound_only">전체메뉴열기</span></button>
+             <ul id="gnb_1dul" class="d-none d-lg-block">
                    
                     <?php
                     $menu_datas = get_menu_db(0, true);
@@ -48,7 +50,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                             if( empty($row2) ) continue; 
 
                             if($k == 0)
-                                echo '<span class="bg">하위분류</span><div class="gnb_2dul bg-transparent"><ul class="gnb_2dul_box bg-transparent">'.PHP_EOL;
+                                echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
                         ?>
                             <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
                         <?php
@@ -67,8 +69,8 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                         <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                     <?php } ?>
                 </ul>
-                <div id="gnb_all">
-                    <h2>전체메뉴</h2>
+                <div id="gnb_all" class="postion-absolute">
+                    <!-- <h2>전체메뉴</h2> -->
                     <ul class="gnb_al_ul">
                         <?php
                         
@@ -81,7 +83,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                             $k = 0;
                             foreach( (array) $row['sub'] as $row2 ){
                                 if($k == 0)
-                                    echo '<ul>'.PHP_EOL;
+                                    echo '<ul class="ul2ul">'.PHP_EOL;
                             ?>
                                 <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
                             <?php
@@ -100,12 +102,16 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                             <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                         <?php } ?>
                     </ul>
-                    <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+                    <button type="button" class="gnb_close_btn d-lg-none"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+
                 </div>
+
+
                 <div id="gnb_all_bg"></div>
             </div>
         </nav>
-        <ul class="hd_login d-flex m-0">        
+        <ul class="hd_login d-none d-lg-block d-lg-flex m-0">        
             <?php if ($is_member) {  ?>
             <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
             <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
@@ -113,8 +119,8 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
             <li class="tnb_admin d-none"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
             <?php }  ?>
             <?php } else {  ?>
-            <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
             <?php }  ?>
             <!-- 만듦 -->
             <li><a href="">LOGIN</a></li>
@@ -178,13 +184,18 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
     <script>
     
     $(function(){
+
+
         $(".gnb_menu_btn").click(function(){
-            $("#gnb_all, #gnb_all_bg").show();
+            $("#gnb_all, #gnb_all_bg").toggle();
+            $("body").toggleClass("viewmenu")
         });
         $(".gnb_close_btn, #gnb_all_bg").click(function(){
             $("#gnb_all, #gnb_all_bg").hide();
+           
         });
 
+        //텍스트 hover했을때 색 변경
         $(".gnb_al_li_plus").hover(function(){
             $("#hd").addClass("hover"+$(this).index());
         }, function(){
@@ -198,6 +209,13 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                 $("body").removeClass("scroll");
             }
         })
+
+        //모바일 2단 메뉴 
+        $(".gnb_al_li").click(function(){
+            
+             $(this).children(".ul2ul").toggleClass("act").parent().siblings().find(".ul2ul").removeClass("act");
+        })
+
     });
 
     
