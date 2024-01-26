@@ -103,7 +103,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                         <?php } ?>
                     </ul>
 
-                    <button type="button" class="gnb_close_btn d-lg-none"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+                    <button type="button" class="gnb_close_btn d-none"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
 
                 </div>
 
@@ -188,11 +188,12 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 
         $(".gnb_menu_btn").click(function(){
             $("#gnb_all, #gnb_all_bg").toggle();
-            $("body").toggleClass("viewmenu")
+            $("body").toggleClass("viewmenu");
+         
         });
         $(".gnb_close_btn, #gnb_all_bg").click(function(){
             $("#gnb_all, #gnb_all_bg").hide();
-           
+     
         });
 
         //텍스트 hover했을때 색 변경

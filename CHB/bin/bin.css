@@ -35,8 +35,15 @@ body a {
 body a:hover {
   text-decoration: none;
 }
+body.viewmenu {
+  overflow: hidden;
+}
+body.viewmenu .bi-list::before {
+  content: "\f659";
+}
 body.viewmenu #hd_wrapper {
   background-color: #F8F8F8 !important;
+  transition: none;
 }
 body #hd:before {
   content: "";
@@ -362,14 +369,32 @@ body .btn_bo_user li {
   margin: 0;
 }
 .best .product .product_li {
-  height: 45vw;
+  height: 100vw;
   max-height: 520px;
   width: 470px;
+}
+@media (min-width: 768px) {
+  .best .product .product_li {
+    margin-right: 2rem;
+  }
+}
+.best .product .product_li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 500px) {
+  .best .product .product_li {
+    width: 100%;
+  }
+}
+.best .product .product_li p {
+  font-size: 18px;
 }
 .best .product .product_li a {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
+  background-color: #fafafc;
+  height: calc(100% - 150px);
 }
 
 .brand {
@@ -411,6 +436,12 @@ body .btn_bo_user li {
 .instagram {
   margin-top: 170px;
 }
+@media (max-width: 990px) {
+  .instagram .pic img {
+    height: 50vw;
+    max-height: 797px;
+  }
+}
 .instagram .pic img:hover {
   filter: brightness(0.5);
 }
@@ -439,4 +470,64 @@ body .btn_bo_user li {
 .instagram .content a:hover {
   background-color: rgba(30, 30, 30, 0.2);
   color: #F8F8F8;
+}
+
+.apply {
+  margin-top: 170px;
+  background-color: #FAFAFA;
+}
+.apply .wrap h2 {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 2rem 0;
+}
+.apply .wrap p {
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #1E1E1E;
+}
+.apply .wrap p strong {
+  font-size: 17px;
+  font-weight: 500;
+}
+.apply .wrap .content {
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.apply .wrap input {
+  outline: 0;
+  padding: 0 10px;
+  border: 1px solid #999999;
+}
+.apply .wrap input::placeholder {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 300;
+}
+.apply .wrap .agree textarea {
+  resize: none;
+  margin-bottom: 2rem;
+  border: 1px solid #999999;
+  padding: 0 10px;
+}
+.apply .wrap .agree textarea::placeholder {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 300;
+}
+.apply button {
+  font-size: 15px;
+  font-weight: 300;
+  border: 0;
+  background-color: #999999;
+  color: #F8F8F8;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  margin-bottom: 5rem;
+}
+.apply button:hover {
+  background-color: #1E1E1E;
+  transition: 0.5s;
 }

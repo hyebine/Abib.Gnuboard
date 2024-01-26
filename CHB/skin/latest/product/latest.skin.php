@@ -18,7 +18,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
    <?php echo $bo_content ?>
    </h3>
 
-    <ul class="product container d-md-flex p-0">
+    <ul class="product container d-md-flex px-4 py-0 px-md-0">
     <?php
     for ($i=0; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
@@ -33,13 +33,13 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
 
-        <li class="product_li align-items-center justify-content-lg-between justify-content-center text-center mr-lg-4">
+        <li class="product_li align-items-center justify-content-lg-between justify-content-center text-center">
   
         <?php
-           echo "<a href=\"".$wr_href."\" class='h-100 d-block' style='background-image:url(".$img.")'> ";     
+           echo "<a href=\"".$wr_href."\" class='d-block' style='background-image:url(".$img.")'> ";     
             echo "</a>";
 
-            echo "<p class='mb-0'>".$list[$i]['wr_subject']."</p>";
+            echo "<p class='mb-0 mt-4'>".$list[$i]['wr_subject']."</p>";
             echo "<span>".$list[$i]['wr_content']."</span>";
            ?>
  
