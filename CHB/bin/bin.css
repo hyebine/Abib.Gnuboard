@@ -496,26 +496,38 @@ body .btn_bo_user li {
   font-weight: 400;
   padding-bottom: 1rem;
 }
-.apply .wrap input {
+.apply .wrap .content input {
+  width: 50%;
   outline: 0;
-  padding: 0 10px;
+  padding: 4px 10px;
   border: 1px solid #999999;
 }
-.apply .wrap input::placeholder {
+.apply .wrap .content input::placeholder {
   color: #999999;
   font-size: 12px;
   font-weight: 300;
 }
-.apply .wrap .agree textarea {
-  resize: none;
-  margin-bottom: 2rem;
-  border: 1px solid #999999;
-  padding: 0 10px;
+.apply .wrap .content input::-webkit-outer-spin-button,
+.apply .wrap .content input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.apply .wrap .agree textarea::placeholder {
+.apply .wrap .content textarea {
+  width: 50%;
+  outline: 0;
+  padding: 4px 10px;
+  border: 1px solid #999999;
+  resize: none !important;
+}
+.apply .wrap .content textarea::placeholder {
   color: #999999;
   font-size: 12px;
   font-weight: 300;
+}
+.apply .wrap .agree {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 3rem 0;
 }
 .apply button {
   font-size: 15px;
@@ -530,4 +542,82 @@ body .btn_bo_user li {
 .apply button:hover {
   background-color: #1E1E1E;
   transition: 0.5s;
+}
+
+#ft {
+  background-color: #1E1E1E;
+  color: #F8F8F8;
+}
+#ft .ft_cnt {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+#ft .ft_cnt h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem 0;
+}
+#ft .ft_cnt p {
+  margin: 0;
+}
+#ft .ft_cnt ul {
+  font-size: 12px;
+  font-weight: 200;
+}
+#ft .ft_cnt a {
+  color: #F8F8F8;
+}
+#ft .ft_cnt .icons {
+  width: 120px;
+}
+#ft .ft_cnt .icons li {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #F8F8F8;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2;
+}
+#ft .ft_cnt .icons li .bi {
+  font-size: 1rem;
+  color: #F8F8F8;
+}
+
+#consult p:first-of-type {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+#ft_company .ft_info span {
+  font-weight: 500;
+}
+
+#ft_link {
+  margin-top: 2rem;
+}
+
+#ft_copy {
+  font-size: 12px;
+  font-weight: 200;
+  border-top: 1px solid #999999;
+}
+
+#top_btn {
+  font-size: 25px;
+  font-weight: 800;
+  border: 1px solid #1E1E1E;
+  border-radius: 50%;
+  color: #1E1E1E;
+  text-align: center;
+  z-index: 90;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+}
+#top_btn:hover {
+  color: #1E1E1E;
+  background-color: rgba(30, 30, 30, 0.2);
 }

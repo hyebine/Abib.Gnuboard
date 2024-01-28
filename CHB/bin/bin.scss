@@ -567,6 +567,8 @@ body {
       max-height: 520px;
       width: 470px;
 
+
+
       @media (min-width:768px) {
         margin-right: 2rem;
 
@@ -591,6 +593,7 @@ body {
         background-size: 100% auto;
         background-color: #fafafc;
         height: calc(100% - 150px);
+
       }
     }
   }
@@ -736,29 +739,37 @@ body {
       font-weight: 400;
       padding-bottom: 1rem;
 
-    }
 
-    input {
-      outline: 0;
-      padding: 0 10px;
-      border: 1px solid $activecolor;
+      input {
+        width: 50%;
+        outline: 0;
+        padding: 4px 10px;
+        border: 1px solid $activecolor;
 
-      &::placeholder {
-        color: $activecolor;
-        font-size: 12px;
-        font-weight: 300;
+        &::placeholder {
+          color: $activecolor;
+          font-size: 12px;
+          font-weight: 300;
+        }
+
       }
-    }
 
-    .agree {
+      //Chrome, Safari, Edge, Opera 
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
 
 
       textarea {
-        resize: none;
-        margin-bottom: 2rem;
+        width: 50%;
+        outline: 0;
+        padding: 4px 10px;
         border: 1px solid $activecolor;
-        padding: 0 10px;
+        resize: none !important;
+
 
         &::placeholder {
           color: $activecolor;
@@ -766,7 +777,16 @@ body {
           font-weight: 300;
         }
       }
+
+
     }
+
+    .agree {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 3rem 0;
+    }
+
   }
 
 
@@ -789,4 +809,110 @@ body {
   }
 
 
+
+}
+
+
+// 하단
+
+#ft {
+  background-color: $basiccolor;
+  color: $basicWcolor;
+
+  .ft_cnt {
+
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0;
+      padding: 1rem 0;
+
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      font-size: 12px;
+      font-weight: 200;
+    }
+
+    a {
+      color: $basicWcolor;
+    }
+
+    .icons {
+      width: 120px;
+
+      li {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $basicWcolor;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2;
+
+        .bi {
+          font-size: 1rem;
+
+          color: $basicWcolor;
+        }
+      }
+
+    }
+  }
+}
+
+#consult {
+  p {
+    &:first-of-type {
+      font-size: 17px;
+      font-weight: 400;
+    }
+  }
+}
+
+#ft_company {
+  .ft_info {
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+#ft_link {
+  margin-top: 2rem;
+}
+
+#ft_copy {
+  font-size: 12px;
+  font-weight: 200;
+  border-top: 1px solid $activecolor;
+
+}
+
+//퀵
+#top_btn {
+  font-size: 25px;
+  font-weight: 800;
+  border: 1px solid $basiccolor;
+  border-radius: 50%;
+  color: $basiccolor ;
+  text-align: center;
+  z-index: 90;
+  background: transparent;
+
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+
+  &:hover {
+    color: $basiccolor;
+    background-color: rgba($basiccolor, $alpha: 0.2);
+  }
 }

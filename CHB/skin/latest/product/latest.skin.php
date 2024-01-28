@@ -36,7 +36,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <li class="product_li align-items-center justify-content-lg-between justify-content-center text-center">
   
         <?php
-           echo "<a href=\"".$wr_href."\" class='d-block' style='background-image:url(".$img.")'> ";     
+           echo "<a href=\"".$wr_href."\" class='d-block bg_cg' style='background-image:url(".$img.")'> ";     
             echo "</a>";
 
             echo "<p class='mb-0 mt-4'>".$list[$i]['wr_subject']."</p>";

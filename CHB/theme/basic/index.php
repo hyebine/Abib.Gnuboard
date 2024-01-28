@@ -28,8 +28,8 @@ include_once(G5_THEME_PATH.'/head.php');
 			<h2>상담예약</h2>
 			<p>고객님의 기본정보를 입력해 주시면 <strong>Abib</strong>가 연락드리겠습니다.</p>
 		</div>
-		<div class="col-6 mx-auto ">
-			<form action="#">
+		<div class="col-6 mx-auto">
+			<form>
 
 	 		<div class="content d-md-flex justify-content-between align-items-center">
    		<label for="name">이름</label>
