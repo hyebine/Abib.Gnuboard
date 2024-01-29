@@ -12,7 +12,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 <div class="instagram container d-flex justify-content-center justify-content-lg-between align-items-center">
 
-    <div class="d-lg-flex">
+    <div class="d-lg-flex justify-content-between w-100">
     <?php
     for ($i=0; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
@@ -26,17 +26,17 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-    <div class="pic col col-lg-8 d-flex align-items-center">
-        <div>
-          <img src="<?php echo G5_URL ?>/bin/img/IMG0.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2">
-          <img src="<?php echo G5_URL ?>/bin/img/IMG1.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2">
+    <div class="pic col-lg-8 d-flex align-items-center">
+        <div class="col-md-6">
+          <img src="<?php echo G5_URL ?>/bin/img/IMG0.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2 img-fluid">
+          <img src="<?php echo G5_URL ?>/bin/img/IMG1.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2 img-fluid">
         </div>
 
         <div>
-          <img src="<?php echo G5_URL ?>/bin/img/IMG2.jpg" alt="<?php echo $config['cf_title']; ?>" class="mr-2" >
+          <img src="<?php echo G5_URL ?>/bin/img/IMG2.jpg" alt="<?php echo $config['cf_title']; ?>" class="mr-2 img-fluid" >
         </div>
     </div>
-         <div class="col col-lg-4 d-flex justify-content-center flex-column ml-lg-5">
+         <div class="col-lg-4 d-flex justify-content-center flex-column">
             <div class="content">
                 <?php
                    echo $list[$i]['wr_subject'];

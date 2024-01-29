@@ -553,11 +553,18 @@ body {
   padding-top: 170px;
 
   .title {
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     font-size: 50px;
     font-weight: 400;
     margin: 0;
 
+  }
+
+  h3 {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 100px;
+    font-weight: 400;
   }
 
   .product {
@@ -662,7 +669,7 @@ body {
     img {
 
       @media (max-width:990px) {
-        height: 50vw;
+        // height: 50vw;
         max-height: 797px;
       }
 
@@ -785,6 +792,10 @@ body {
       font-size: 14px;
       font-weight: 400;
       margin: 3rem 0;
+
+      input {
+        accent-color: $basiccolor;
+      }
     }
 
   }
@@ -825,6 +836,12 @@ body {
     font-weight: 300;
     margin-bottom: 2rem;
 
+    @media (max-width:990px) {
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
     h3 {
       font-size: 15px;
       font-weight: 500;
@@ -859,7 +876,6 @@ body {
 
         .bi {
           font-size: 1rem;
-
           color: $basicWcolor;
         }
       }
@@ -891,9 +907,13 @@ body {
 
 #ft_copy {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
   border-top: 1px solid $activecolor;
 
+  @media (max-width:990px) {
+    border-top: none;
+
+  }
 }
 
 //퀵
@@ -905,14 +925,15 @@ body {
   color: $basiccolor ;
   text-align: center;
   z-index: 90;
-  background: transparent;
+  background: $basicWcolor;
 
   width: 40px;
   height: 40px;
   line-height: 1;
 
   &:hover {
-    color: $basiccolor;
+    color: $basicWcolor;
     background-color: rgba($basiccolor, $alpha: 0.2);
+    border: 1px solid $basicWcolor;
   }
 }

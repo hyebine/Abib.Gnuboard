@@ -36,13 +36,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
             </ul>
         </div>
 
-        <div id="consult" class="ft_cnt">
+        <div id="consult" class="ft_cnt d-none d-lg-block">
             <h3>제품 상담</h3>
             <p>070-4131-5906</p>
             <p>abib@fourco.co.kr</p>
         </div>
 
-        <div id="ft_company" class="ft_cnt">
+        <div id="ft_company" class="ft_cnt d-none d-lg-block">
         	<h3>회사 정보</h3>
 	        <ul class="ft_info">
 	        	<li><span>대표자.</span> 김민우</li>
@@ -52,29 +52,29 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
              </ul>
 	    </div>
 
-       <div id="ft_link" class="ft_cnt">
+       <div id="ft_link" class="ft_cnt d-none d-lg-block">
         <h3>고객 서비스</h3>
         <ul>
             <li>
                 <a href="<?php echo get_pretty_url('content', 'company'); ?>">주문조희</a>
             </li>
             <li>
-                <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">문의</a>
+                <a href="">문의</a>
             </li>
             <li>
-              <a href="<?php echo get_pretty_url('content', 'provision'); ?>">자주 묻는 질문</a>
+              <a href="">자주 묻는 질문</a>
             </li>
             <li>
-              <a href="<?php echo get_pretty_url('content', 'provision'); ?>">고객 센터</a>
+              <a href="">고객 센터</a>
             </li>
             <li>
-              <a href="<?php echo get_pretty_url('content', 'provision'); ?>">매장 정보</a>
+              <a href="">매장 정보</a>
             </li>
             <li>
               <a href="<?php echo get_pretty_url('content', 'provision'); ?>">이용약관</a>
             </li>
             <li>
-              <a href="<?php echo get_pretty_url('content', 'provision'); ?>"><strong>개인정보처리방침<strong></a>
+              <a href="<?php echo get_pretty_url('content', 'privacy'); ?>"><strong>개인정보처리방침<strong></a>
             </li>
         </ul>
         </div>

@@ -31,16 +31,16 @@ include_once(G5_THEME_PATH.'/head.php');
 		<div class="col-6 mx-auto">
 			<form>
 
-	 		<div class="content d-md-flex justify-content-between align-items-center">
+	 		<div class="content d-flex justify-content-between align-items-center mt-5">
    		<label for="name">이름</label>
 	 		<input type="text" name="name" placeholder="이름을 입력해주세요." require>
 	 		</div>
-	 		<div class="content d-md-flex justify-content-between align-items-center">
+	 		<div class="content d-flex justify-content-between align-items-center">
 	 		<label for="phone">연락처</label>
 	 		<input type="number" name="phone" placeholder="휴대폰번호를 입력해주세요." require>
 	 		</div>
 
-	 		<div class="content d-md-flex justify-content-between align-items-center">
+	 		<div class="content d-flex justify-content-between align-items-center">
 				<label for="question">문의사항</label>
 				<textarea name="question" placeholder="내용을 입력해주세요." require></textarea>
       </div>
