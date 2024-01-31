@@ -27,13 +27,21 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
     <div class="pic col-lg-8 d-flex align-items-center">
-        <div class="col-md-6">
-          <img src="<?php echo G5_URL ?>/bin/img/IMG0.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2 img-fluid">
-          <img src="<?php echo G5_URL ?>/bin/img/IMG1.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block m-2 img-fluid">
+        <div class="col-md-6 pr-0">
+          
+          <span>
+            <img src="<?php echo G5_URL ?>/bin/img/IMG0.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block img-fluid">
+          </span>
+
+          <span>
+           <img src="<?php echo G5_URL ?>/bin/img/IMG1.jpg" alt="<?php echo $config['cf_title']; ?>" class="d-block img-fluid">
+          </span>
         </div>
 
-        <div>
-          <img src="<?php echo G5_URL ?>/bin/img/IMG2.jpg" alt="<?php echo $config['cf_title']; ?>" class="mr-2 img-fluid" >
+        <div class="col-md-6 pl-2">
+          <span>
+            <img src="<?php echo G5_URL ?>/bin/img/IMG2.jpg" alt="<?php echo $config['cf_title']; ?>" class="img-fluid" >
+          </span>
         </div>
     </div>
          <div class="col-lg-4 d-flex justify-content-center flex-column">
