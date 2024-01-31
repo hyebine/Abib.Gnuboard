@@ -7,6 +7,10 @@
   background-color: #272B28 !important;
 }
 
+legend {
+  font-size: 0 !important;
+}
+
 .scroll #hd_wrapper {
   background-color: rgba(248, 248, 248, 0.5);
   border-bottom: 1px solid #1E1E1E;
@@ -480,6 +484,16 @@ body .btn_bo_user li {
 .apply {
   margin-top: 170px;
   background-color: #FAFAFA;
+  position: relative;
+}
+.apply:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  background-color: #FAFAFA;
+  top: 100%;
+  left: 0;
+  width: 100%;
 }
 .apply .wrap h2 {
   font-size: 40px;
@@ -501,8 +515,12 @@ body .btn_bo_user li {
   font-weight: 400;
   padding-bottom: 1rem;
 }
+.apply .wrap .content label {
+  max-width: 100px;
+}
 .apply .wrap .content input {
-  width: 50%;
+  flex-grow: 1;
+  max-width: 200px;
   outline: 0;
   padding: 4px 10px;
   border: 1px solid #999999;
@@ -518,7 +536,7 @@ body .btn_bo_user li {
   margin: 0;
 }
 .apply .wrap .content textarea {
-  width: 50%;
+  max-width: 200px;
   outline: 0;
   padding: 4px 10px;
   border: 1px solid #999999;
@@ -625,20 +643,64 @@ body .btn_bo_user li {
 }
 
 #top_btn {
-  font-size: 25px;
-  font-weight: 800;
-  border: 1px solid #1E1E1E;
-  border-radius: 50%;
+  position: sticky;
   color: #1E1E1E;
   text-align: center;
   z-index: 90;
   background: #F8F8F8;
+  font-size: 25px;
+  font-weight: 800;
+  border: 1px solid #1E1E1E;
+  border-radius: 50%;
+  transform: translateY(-100%);
+  bottom: 0;
+  left: calc(100% - 60px);
+  right: unset;
   width: 40px;
   height: 40px;
   line-height: 1;
 }
 #top_btn:hover {
   color: #F8F8F8;
-  background-color: rgba(30, 30, 30, 0.2);
-  border: 1px solid #F8F8F8;
+  background-color: #1E1E1E;
+  border: 1px solid #1E1E1E;
+}
+
+.ctt_img {
+  max-height: 600px;
+  height: 100vw;
+  background-size: auto 100%;
+}
+@media (max-width: 990px) {
+  .ctt_img {
+    background-size: auto 100%;
+  }
+}
+
+.boardTitleimg {
+  max-height: 600px;
+  height: 100vw;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boardTitleimg img,
+.boardTitleimg p {
+  display: none;
+}
+@media (max-width: 990px) {
+  .boardTitleimg {
+    background-size: auto 100%;
+  }
+}
+
+#bo_list,
+#bo_v {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

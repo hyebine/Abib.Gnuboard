@@ -45,13 +45,26 @@ header("Pragma: no-cache"); // HTTP/1.0
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">'.PHP_EOL;
 
 
+    //  seo
+    
+    echo '<meta property="og:site_name" content="그누보드 Abib" />' .PHP_EOL;
+    echo '<meta property="og:url" content="http://berryme.dothome.co.kr/CHB/" />' .PHP_EOL;
+    echo '<meta property="og:type" content="website" />'.PHP_EOL;
+    echo '<meta property="og:title" content="아비브를 만나는 순간 시작되는 새로운 당신" />' .PHP_EOL;
+    echo' <meta property="og:description" content="화장품, 스킨케어, 코스메틱, 미니멀리즘" />' .PHP_EOL;
+
+
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 <title><?php echo $g5_head_title; ?></title>
+<!-- favicon -->
+<link rel="icon" href="<?php echo G5_URL; ?>/bin/img/favicon.png" type="image/x-icon">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet">
+
 <?php
 
 echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_THEME_CSS_URL.'/default.css?ver='.G5_CSS_VER, G5_THEME_URL).'">'.PHP_EOL;

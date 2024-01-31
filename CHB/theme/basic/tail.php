@@ -10,6 +10,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 </div>
 
+
+    <button type="button" id="top_btn">
+       <i class="bi bi-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+    </button>
+
+
 </div>
 <!-- } 콘텐츠 끝 -->
 
@@ -84,9 +90,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         <div id="ft_copy" class="text-center py-3">The digital platform for <b>ABIB</b> CO.Manual for Freedom, Research and Creativity
     </div>
         
-    <button type="button" id="top_btn">
-    	<i class="bi bi-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
-    </button>
+
     <script>
     $(function() {
         $("#top_btn").on("click", function() {
