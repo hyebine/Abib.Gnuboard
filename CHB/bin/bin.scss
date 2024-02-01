@@ -162,6 +162,18 @@ body {
 
         }
 
+        .bi-search,
+        .bi-person-fill,
+        .bi-person {
+          font-size: 25px;
+          color: $basiccolor;
+
+
+          &:hover {
+            color: $basiccolor;
+          }
+        }
+
       }
     }
 
@@ -491,6 +503,13 @@ body {
     padding-bottom: 100px;
     font-size: 50px;
     font-weight: 400;
+
+    @media (max-width:990px) {
+      font-size: 40px;
+
+    }
+
+
   }
 
   .cotegory_li {
@@ -563,6 +582,11 @@ body {
     font-weight: 400;
     margin: 0;
 
+    @media (max-width:990px) {
+      font-size: 40px;
+
+    }
+
   }
 
   h3 {
@@ -570,6 +594,11 @@ body {
     text-align: center;
     padding-bottom: 100px;
     font-weight: 400;
+
+    @media (max-width:990px) {
+      font-size: 10px;
+
+    }
   }
 
   .product {
@@ -754,7 +783,7 @@ body {
   &:after {
     content: "";
     position: absolute;
-    height: 40px;
+    height: 80px;
     background-color: #FAFAFA;
     top: 100%;
     left: 0;
@@ -878,6 +907,7 @@ body {
 #ft {
   background-color: $basiccolor;
   color: $basicWcolor;
+  margin-top: 40px;
 
   .ft_cnt {
 
@@ -972,15 +1002,14 @@ body {
   text-align: center;
   z-index: 90;
   background: $basicWcolor;
-
   font-size: 25px;
   font-weight: 800;
   border: 1px solid $basiccolor;
   border-radius: 50%;
 
-  transform: translateY(-100%);
+  // transform: translateY(-100%);
 
-  bottom: 0;
+  bottom: 40px;
   left: calc(100% - 60px); //너비 40 빼기
   right: unset;
 
@@ -996,6 +1025,9 @@ body {
 }
 
 
+//내용관리
+
+
 //내용관리 배경이미지 사이즈 넣기 
 .ctt_img {
   max-height: 600px;
@@ -1008,10 +1040,59 @@ body {
   }
 }
 
+.ctt_BRAND {
+
+  .brand_title {
+    text-align: center;
+    padding: 4rem 0;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 400;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+
+  .brand_only {
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+
+    }
+
+    .line01 {
+      display: block;
+      border: 1px solid $basiccolor;
+      width: 600px;
+    }
+
+    h4 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    li {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+
+
+
+
 .boardTitleimg {
   max-height: 600px;
   height: 100vw;
-  background-size: 100%;
+  background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -1028,6 +1109,11 @@ body {
     background-size: auto 100%;
 
   }
+
+  span {
+    color: $basicWcolor;
+    font-weight: 300;
+  }
 }
 
 // 게시판 컨테이너
@@ -1036,4 +1122,90 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+// footer
+
+#container {
+  min-height: calc(100vh - 224px);
+}
+
+
+// 네비게이션 게시판
+.normalpage #gnb_1dul .gnb_1da {
+  color: $basiccolor;
+}
+
+.contentpage {
+
+  .ctt_img {
+    .text {
+      color: $basicWcolor;
+      font-size: 20px;
+      font-weight: 300;
+
+
+
+      &::after {
+        position: absolute;
+        content: "\F128";
+        font-family: bootstrap-icons !important;
+        font-size: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        padding-top: 8rem;
+
+      }
+    }
+
+  }
+
+  // 
+
+
+
+}
+
+// 광고
+
+.normalpage .adtop {
+  display: none !important;
+}
+
+
+// 컨테이너 풀어주기
+
+.contentpage #container,
+.indexpage #container,
+#container.boardcontent {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+// 회원가입
+
+.register {
+  padding-top: 150px;
+
+  p {
+    background: $basiccolor !important;
+
+    &:before {
+      background: $basiccolor !important;
+    }
+  }
+
+}
+
+
+.btn_submit {
+
+  background-color: $activecolor;
+
+
+  &:hover {
+    background-color: $basiccolor;
+  }
 }

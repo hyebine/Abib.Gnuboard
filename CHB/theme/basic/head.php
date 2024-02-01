@@ -28,9 +28,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
         <nav id="gnb">
             <h2>메인메뉴</h2>
             <div class="gnb_wrap">
-            <button type="button" class="gnb_menu_btn d-lg-none " title="전체메뉴">
-                <i class="bi bi-list" aria-hidden="true"></i>
-                <span class="sound_only">전체메뉴열기</span></button>
+            
              <ul id="gnb_1dul" class="d-none d-lg-block">
                    
                     <?php
@@ -111,29 +109,44 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
                 <div id="gnb_all_bg"></div>
             </div>
         </nav>
-        <ul class="hd_login d-none d-lg-block d-lg-flex m-0">        
+        <ul class="hd_login d-flex mb-0 ml-auto ml-lg-0">        
             <?php if ($is_member) {  ?>
-            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
-            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-            <?php if ($is_admin) {  ?>
-            <li class="tnb_admin d-none"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-            <?php }  ?>
+                <li class="d-none d-lg-block"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">MODIFY</a></li>
+                <li >
+                  <a href="<?php echo G5_BBS_URL ?>/logout.php">
+                     <i class="bi bi-person-fill d-block d-lg-none"></i>
+                    <span class="d-none d-lg-block">LOGOUT</span>
+                </a>
+                </li>
+                <?php if ($is_admin) {  ?>
+                    <li class="tnb_admin d-none"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php }  ?>
             <?php } else {  ?>
-            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-            <li class="d-none"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+                <li class="d-none d-lg-block" ><a href="<?php echo G5_BBS_URL ?>/register.php">JOIN</a></li>
+                <li >
+                  <a href="<?php echo G5_BBS_URL ?>/login.php">
+                     <i class="bi bi-person d-block d-lg-none"></i>
+                     <span class="d-none d-lg-block">LOGIN</span></a>
+              </li>
             <?php }  ?>
+
             <!-- 만듦 -->
-            <li><a href="">LOGIN</a></li>
-            <li><a href="">JOIN</a></li>
-            <li><a href="">SEARCH</a></li>
+      
+     
+            <li ><a href="#hd_sch"><i class="bi bi-search d-block d-lg-none"></i><span class="d-none d-lg-block">SEARCH<span></a></li>
+   
+
         </ul>
+        <button type="button" class="gnb_menu_btn d-lg-none border-0 pl-3" title="전체메뉴">
+                <i class="bi bi-list" aria-hidden="true"></i>
+                <span class="sound_only">전체메뉴열기</span></button>
 
     </div>
 
         
 
-        <div class="hd_sch_wr position-absolute d-none">
-            <fieldset id="hd_sch">
+        <div class="hd_sch_wr position-absolute ">
+            <fieldset id="hd_sch" class="d-none">
                 <legend>사이트 내 전체검색</legend>
                 <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
                 <input type="hidden" name="sfl" value="wr_subject||wr_content">
@@ -233,6 +246,6 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <div id="wrapper">
     <div id="container_wr">
    
-    <div id="container" class="<?php if (!defined("_INDEX_")) { if($bo_table) echo "boardcontent ".$bo_table; } ?>"   >
+    <div id="container" class="container-lg px-3 <?php if (!defined("_INDEX_")) { if($bo_table) echo "boardcontent ".$bo_table; }; if(defined("_LOGIN_")) echo ' loginpage d-flex flex-column justify-content-center align-items-center'; ?> "   >
   
         

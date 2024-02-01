@@ -101,6 +101,17 @@ body #hd_wrapper .hd_login li {
 body #hd_wrapper .hd_login li a:hover {
   color: #999999;
 }
+body #hd_wrapper .hd_login li .bi-search,
+body #hd_wrapper .hd_login li .bi-person-fill,
+body #hd_wrapper .hd_login li .bi-person {
+  font-size: 25px;
+  color: #1E1E1E;
+}
+body #hd_wrapper .hd_login li .bi-search:hover,
+body #hd_wrapper .hd_login li .bi-person-fill:hover,
+body #hd_wrapper .hd_login li .bi-person:hover {
+  color: #1E1E1E;
+}
 body #hd_wrapper .gnb_menu_btn {
   background-color: transparent;
   color: #1E1E1E;
@@ -319,6 +330,11 @@ body .btn_bo_user li {
   font-size: 50px;
   font-weight: 400;
 }
+@media (max-width: 990px) {
+  .cotegory .title {
+    font-size: 40px;
+  }
+}
 .cotegory .cotegory_li {
   height: 35vw;
   max-height: 430px;
@@ -372,11 +388,21 @@ body .btn_bo_user li {
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 990px) {
+  .best .title {
+    font-size: 40px;
+  }
+}
 .best h3 {
   font-size: 15px;
   text-align: center;
   padding-bottom: 100px;
   font-weight: 400;
+}
+@media (max-width: 990px) {
+  .best h3 {
+    font-size: 10px;
+  }
 }
 .best .product .product_li {
   height: 100vw;
@@ -510,7 +536,7 @@ body .btn_bo_user li {
 .apply:after {
   content: "";
   position: absolute;
-  height: 40px;
+  height: 80px;
   background-color: #FAFAFA;
   top: 100%;
   left: 0;
@@ -594,6 +620,7 @@ body .btn_bo_user li {
 #ft {
   background-color: #1E1E1E;
   color: #F8F8F8;
+  margin-top: 40px;
 }
 #ft .ft_cnt {
   font-size: 14px;
@@ -673,8 +700,7 @@ body .btn_bo_user li {
   font-weight: 800;
   border: 1px solid #1E1E1E;
   border-radius: 50%;
-  transform: translateY(-100%);
-  bottom: 0;
+  bottom: 40px;
   left: calc(100% - 60px);
   right: unset;
   width: 40px;
@@ -698,10 +724,42 @@ body .btn_bo_user li {
   }
 }
 
+.ctt_BRAND .brand_title {
+  text-align: center;
+  padding: 4rem 0;
+}
+.ctt_BRAND .brand_title h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+.ctt_BRAND .brand_title p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.ctt_BRAND .brand_only h3 {
+  font-size: 17px;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+.ctt_BRAND .brand_only .line01 {
+  display: block;
+  border: 1px solid #1E1E1E;
+  width: 600px;
+}
+.ctt_BRAND .brand_only h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.ctt_BRAND .brand_only li {
+  font-size: 13px;
+  font-weight: 400;
+}
+
 .boardTitleimg {
   max-height: 600px;
   height: 100vw;
-  background-size: 100%;
+  background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -718,10 +776,67 @@ body .btn_bo_user li {
     background-size: auto 100%;
   }
 }
+.boardTitleimg span {
+  color: #F8F8F8;
+  font-weight: 300;
+}
 
 #bo_list,
 #bo_v {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+#container {
+  min-height: calc(100vh - 224px);
+}
+
+.normalpage #gnb_1dul .gnb_1da {
+  color: #1E1E1E;
+}
+
+.contentpage .ctt_img .text {
+  color: #F8F8F8;
+  font-size: 20px;
+  font-weight: 300;
+}
+.contentpage .ctt_img .text::after {
+  position: absolute;
+  content: "\f128";
+  font-family: bootstrap-icons !important;
+  font-size: 25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  padding-top: 8rem;
+}
+
+.normalpage .adtop {
+  display: none !important;
+}
+
+.contentpage #container,
+.indexpage #container,
+#container.boardcontent {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.register {
+  padding-top: 150px;
+}
+.register p {
+  background: #1E1E1E !important;
+}
+.register p:before {
+  background: #1E1E1E !important;
+}
+
+.btn_submit {
+  background-color: #999999;
+}
+.btn_submit:hover {
+  background-color: #1E1E1E;
 }

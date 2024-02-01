@@ -125,9 +125,17 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
 
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
+
+ if(!defined('_INDEX_')){
+    $bodycls = "boardpage ".$bo_table;
+    $bodycls =  isset($co_id) ? "contentpage ".$co_id  : " normalpage ";
+  }else{
+    $bodycls = "indexpage";
+     
+  }
 ?>
 </head>
-<body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
+<body class="<?php echo $bodycls; ?>" >
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
     $sr_admin_msg = '';
