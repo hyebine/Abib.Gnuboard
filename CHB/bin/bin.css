@@ -248,7 +248,7 @@ body .btn_bo_user li {
 }
 @media (max-width: 990px) {
   #wrapper .swiper-slide .content {
-    padding-top: 150px;
+    padding-top: 80px;
   }
 }
 #wrapper .swiper-slide .content h3 {
@@ -284,13 +284,13 @@ body .btn_bo_user li {
 }
 @media (max-width: 990px) {
   #wrapper .swiper-slide .content h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
   #wrapper .swiper-slide .content p {
-    font-size: 10px;
+    font-size: 8px;
   }
   #wrapper .swiper-slide .content a {
-    font-size: 12px;
+    font-size: 10px;
     padding: 0.3rem 2rem;
   }
 }
@@ -533,15 +533,6 @@ body .btn_bo_user li {
   background-color: #FAFAFA;
   position: relative;
 }
-.apply:after {
-  content: "";
-  position: absolute;
-  height: 80px;
-  background-color: #FAFAFA;
-  top: 100%;
-  left: 0;
-  width: 100%;
-}
 .apply .wrap h2 {
   font-size: 40px;
   font-weight: 400;
@@ -620,7 +611,6 @@ body .btn_bo_user li {
 #ft {
   background-color: #1E1E1E;
   color: #F8F8F8;
-  margin-top: 40px;
 }
 #ft .ft_cnt {
   font-size: 14px;
@@ -695,22 +685,37 @@ body .btn_bo_user li {
   color: #1E1E1E;
   text-align: center;
   z-index: 90;
-  background: #F8F8F8;
-  font-size: 25px;
-  font-weight: 800;
-  border: 1px solid #1E1E1E;
-  border-radius: 50%;
-  bottom: 40px;
-  left: calc(100% - 60px);
+  background: transparent;
+  left: calc(100% - 70px);
   right: unset;
-  width: 40px;
-  height: 40px;
+  height: 100px;
   line-height: 1;
+  border: 0;
+  display: flex;
+  justify-content: center;
 }
 #top_btn:hover {
+  background: 0;
+}
+#top_btn .bi-arrow-up {
+  border: 1px solid #1E1E1E;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+#top_btn .bi-arrow-up:hover {
   color: #F8F8F8;
   background-color: #1E1E1E;
   border: 1px solid #1E1E1E;
+}
+
+#container_wr {
+  margin: 0 auto -100px;
 }
 
 .ctt_img {
@@ -724,9 +729,15 @@ body .btn_bo_user li {
   }
 }
 
+.ctt_BRAND {
+  margin-bottom: 0 !important;
+}
+.ctt_BRAND #ctt_con {
+  padding: 0;
+}
 .ctt_BRAND .brand_title {
   text-align: center;
-  padding: 4rem 0;
+  padding: 10rem 0;
 }
 .ctt_BRAND .brand_title h3 {
   font-size: 30px;
@@ -737,15 +748,19 @@ body .btn_bo_user li {
   font-size: 17px;
   font-weight: 300;
 }
+.ctt_BRAND .coverbg {
+  height: 100vw;
+  max-height: 700px;
+  background-image: url("./img/bg.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 10rem;
+}
 .ctt_BRAND .brand_only h3 {
   font-size: 17px;
   font-weight: 700;
   padding-bottom: 0.5rem;
-}
-.ctt_BRAND .brand_only .line01 {
-  display: block;
-  border: 1px solid #1E1E1E;
-  width: 600px;
 }
 .ctt_BRAND .brand_only h4 {
   font-size: 15px;
@@ -754,6 +769,67 @@ body .btn_bo_user li {
 .ctt_BRAND .brand_only li {
   font-size: 13px;
   font-weight: 400;
+}
+
+.brandinfo01 {
+  background-image: url("./img/bg2.jpg");
+  background-position: right center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  padding: 20rem 0;
+}
+.brandinfo01 .line01 {
+  display: block;
+  border: 1px solid #1E1E1E;
+  width: 100%;
+}
+.brandinfo01 .brand_txt {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.brandinfo02 {
+  margin: 8rem 0;
+  background-image: url("./img/bg3.jpg");
+  background-position: left center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  padding: 20rem 0;
+}
+.brandinfo02 .line02 {
+  display: block;
+  border: 1px solid #1E1E1E;
+  width: 100%;
+}
+.brandinfo02 .brand_txt {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.abib_bg {
+  background-image: url("./img/bg4.jpg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.abib_bg .content {
+  color: #F8F8F8;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 0 !important;
+}
+.abib_bg .content span {
+  font-size: 40px;
 }
 
 .boardTitleimg {
@@ -796,6 +872,9 @@ body .btn_bo_user li {
   color: #1E1E1E;
 }
 
+.contentpage .ctt_admin {
+  display: none;
+}
 .contentpage .ctt_img .text {
   color: #F8F8F8;
   font-size: 20px;
@@ -825,7 +904,8 @@ body .btn_bo_user li {
 }
 
 .register {
-  padding-top: 150px;
+  margin: 14rem 0 !important;
+  padding: 5rem 0;
 }
 .register p {
   background: #1E1E1E !important;

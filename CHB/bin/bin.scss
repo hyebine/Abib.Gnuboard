@@ -389,7 +389,7 @@ body {
       color: $basicWcolor;
 
       @media (max-width:990px) {
-        padding-top: 150px;
+        padding-top: 80px;
       }
 
       h3 {
@@ -437,16 +437,16 @@ body {
 
       @media (max-width:990px) {
         h3 {
-          font-size: 30px;
+          font-size: 25px;
 
         }
 
         p {
-          font-size: 10px;
+          font-size: 8px;
         }
 
         a {
-          font-size: 12px;
+          font-size: 10px;
           padding: .3rem 2rem;
         }
       }
@@ -780,17 +780,6 @@ body {
   background-color: #FAFAFA;
   position: relative;
 
-  &:after {
-    content: "";
-    position: absolute;
-    height: 80px;
-    background-color: #FAFAFA;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-  }
-
   .wrap {
 
     h2 {
@@ -907,7 +896,7 @@ body {
 #ft {
   background-color: $basiccolor;
   color: $basicWcolor;
-  margin-top: 40px;
+
 
   .ft_cnt {
 
@@ -1001,32 +990,51 @@ body {
   color: $basiccolor ;
   text-align: center;
   z-index: 90;
-  background: $basicWcolor;
-  font-size: 25px;
-  font-weight: 800;
-  border: 1px solid $basiccolor;
-  border-radius: 50%;
+  background: transparent;
 
-  // transform: translateY(-100%);
-
-  bottom: 40px;
-  left: calc(100% - 60px); //너비 40 빼기
+  left: calc(100% - 70px);
   right: unset;
 
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  height: 100px;
   line-height: 1;
 
+  border: 0;
+
+  display: flex;
+  justify-content: center;
+
   &:hover {
-    color: $basicWcolor;
-    background-color: $basiccolor;
+    background: 0;
+  }
+
+  .bi-arrow-up {
     border: 1px solid $basiccolor;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+
+    &:hover {
+      color: $basicWcolor;
+      background-color: $basiccolor;
+      border: 1px solid $basiccolor;
+    }
   }
 }
 
 
+
 //내용관리
 
+#container_wr {
+  margin: 0 auto -100px;
+}
 
 //내용관리 배경이미지 사이즈 넣기 
 .ctt_img {
@@ -1041,10 +1049,15 @@ body {
 }
 
 .ctt_BRAND {
+  margin-bottom: 0 !important;
+
+  #ctt_con {
+    padding: 0;
+  }
 
   .brand_title {
     text-align: center;
-    padding: 4rem 0;
+    padding: 10rem 0;
 
     h3 {
       font-size: 30px;
@@ -1058,6 +1071,18 @@ body {
     }
   }
 
+
+  .coverbg {
+
+    height: 100vw;
+    max-height: 700px;
+    background-image: url('./img/bg.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 10rem;
+  }
+
   .brand_only {
     h3 {
       font-size: 17px;
@@ -1066,11 +1091,6 @@ body {
 
     }
 
-    .line01 {
-      display: block;
-      border: 1px solid $basiccolor;
-      width: 600px;
-    }
 
     h4 {
       font-size: 15px;
@@ -1084,9 +1104,85 @@ body {
   }
 }
 
+.brandinfo01 {
+
+  background-image: url('./img/bg2.jpg');
+  background-position: right center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+
+  padding: 20rem 0;
 
 
+  .line01 {
+    display: block;
+    border: 1px solid $basiccolor;
+    width: 100%;
+  }
 
+  .brand_txt {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+
+
+}
+
+.brandinfo02 {
+  margin: 8rem 0;
+
+  background-image: url('./img/bg3.jpg');
+  background-position: left center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+
+  padding: 20rem 0;
+
+
+  .line02 {
+    display: block;
+    border: 1px solid $basiccolor;
+    width: 100%;
+  }
+
+  .brand_txt {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+.abib_bg {
+
+  background-image: url('./img/bg4.jpg');
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    color: $basicWcolor;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 0 !important;
+
+    span {
+
+      font-size: 40px;
+    }
+  }
+
+}
 
 
 .boardTitleimg {
@@ -1138,6 +1234,10 @@ body {
 
 .contentpage {
 
+  .ctt_admin {
+    display: none;
+  }
+
   .ctt_img {
     .text {
       color: $basicWcolor;
@@ -1187,7 +1287,8 @@ body {
 // 회원가입
 
 .register {
-  padding-top: 150px;
+  margin: 14rem 0 !important;
+  padding: 5rem 0;
 
   p {
     background: $basiccolor !important;
