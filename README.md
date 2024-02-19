@@ -11,7 +11,7 @@ https://url.kr/w3up96
 
 ### 사용 플러그인
 
-swiper 11.0.5
-jquery v2.2.4
-bootstrap-icon 1.11.3
-bootstrap v4.6.2
+- swiper 11.0.5
+- jquery v2.2.4
+- bootstrap-icon 1.11.3
+- bootstrap v4.6.2
