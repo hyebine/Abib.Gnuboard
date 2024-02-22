@@ -28,11 +28,12 @@ include_once(G5_THEME_PATH.'/head.php');
 			<h2>상담예약</h2>
 			<p>고객님의 기본정보를 입력해 주시면 <strong>Abib</strong>가 연락드리겠습니다.</p>
 		</div>
-		<?php include_once(G5_THEME_PATH.'/mainform.php');?>
-		<!-- <div class="col-lg-6 col-md-10 mx-auto">
+
+		<div class="col-lg-6 col-md-10 mx-auto">
 		<form name=frm method=post action="<?php echo G5_BBS_URL;?>/write_update.php" onsubmit="return checkFrm(this);">
 		  <input type=hidden   name=w        value="">
-			<input type="hidden" name="token" value="<?php echo get_write_token('myform'); ?>">
+			<input type="hidden" name="token" value="<?php echo get_write_token('myform'); ?>"> 
+			<!-- myform 게시판명 -->
 		  <input type=hidden name=bo_table value="myform">
 			<input type=hidden name=wr_id    value="">
 			<input type=hidden name=sca      value="">
@@ -46,8 +47,8 @@ include_once(G5_THEME_PATH.'/head.php');
 		  <input type=hidden name=wr_content  value="빠른 상담 신청">
 
 	 		<div class="content d-flex justify-content-between align-items-center mt-5">
-   		<label for="wr_1">이름</label>
-	 		<input type="text" name="wr_1" id="wr_1" value="" placeholder="이름을 입력해주세요." require>
+   		<label for="wr_name">이름</label>
+	 		<input type="text" name="wr_name" id="wr_name" value="" placeholder="이름을 입력해주세요." require>
 	 		</div>
 	 		<div class="content d-flex justify-content-between align-items-center">
 	 		<label for="wr_2">연락처</label>
@@ -60,7 +61,7 @@ include_once(G5_THEME_PATH.'/head.php');
       </div>
 
 	 		<div class="agree">
-	
+
 	 	
 			<input type=checkbox name=wr_6 value="6"  required id="consent">
 			<label for="consent">개인정보 수집 및 활용동의</label>
@@ -69,7 +70,7 @@ include_once(G5_THEME_PATH.'/head.php');
 	 			<button type="submit">상담 예약하기</button>
 				</form>
 			</div>
-		</div> -->
+		</div>
 
 
 
@@ -83,6 +84,7 @@ include_once(G5_THEME_PATH.'/head.php');
 				return false;
 			}
 		}
+
 
 </script>
 
