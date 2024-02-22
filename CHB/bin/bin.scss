@@ -863,6 +863,10 @@ body {
       input {
         accent-color: $basiccolor;
       }
+
+      label {
+        margin-bottom: 0 !important;
+      }
     }
 
   }

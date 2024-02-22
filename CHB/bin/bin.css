@@ -593,6 +593,9 @@ body .btn_bo_user li {
 .apply .wrap .agree input {
   accent-color: #1E1E1E;
 }
+.apply .wrap .agree label {
+  margin-bottom: 0 !important;
+}
 .apply button {
   font-size: 15px;
   font-weight: 300;
