@@ -1,6 +1,5 @@
 ## 그누보드 Abib 리뉴얼
 
-http://berryme.dothome.co.kr/CHB/
 
 ### 기본 테마 사용
 
